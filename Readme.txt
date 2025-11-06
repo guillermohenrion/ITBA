@@ -29,3 +29,9 @@ mlflow server --backend-store-uri sqlite:///mlflow.db --port 5000
 MLflow escuchando en http://localhost:5000/
 
 
+Agregar al mlflow.ipynb 
+    # Crear signature del modelo
+    input_example = X_test_scaled[:5]  # Using first 5 samples from test set
+    mlflow.sklearn.log_model(modelo, "modelo_iris",  input_example=input_example)
+
+
